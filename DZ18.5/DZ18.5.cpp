@@ -17,12 +17,19 @@ class Stack
         array = new int[size];
         last_index = 0;
     }
+    void Show()
+    {
+        std::cout << last_index;
+    }
     void push(int new_elem)
     {
         if (last_index < size)
         {
             array[last_index] = new_elem;
             last_index = last_index + 1;
+            Show();
+            delete array;
+
         }
     }
     int pop()
@@ -31,10 +38,13 @@ class Stack
         {
             last_index = last_index - 1;
             return array[last_index];
+            Show();
+
         }
     }
 
 };
+
 
 int main()
 {
