@@ -17,6 +17,10 @@ class Stack
         array = new int[size];
         last_index = 0;
     }
+    ~Stack()
+    {
+        delete array;
+    }
     void Show()
     {
         std::cout << last_index;
@@ -28,8 +32,6 @@ class Stack
             array[last_index] = new_elem;
             last_index = last_index + 1;
             Show();
-            delete array;
-
         }
     }
     int pop()
@@ -39,7 +41,6 @@ class Stack
             last_index = last_index - 1;
             return array[last_index];
             Show();
-
         }
     }
 
