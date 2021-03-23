@@ -19,7 +19,7 @@ class Stack
     }
     ~Stack()
     {
-        delete array;
+        delete[] array;
     }
     void Show()
     {
